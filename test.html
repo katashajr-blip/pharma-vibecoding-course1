@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Фарм-аналитика рынка</title>
+ 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1acf;
+      padding: 32px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #dbe3e6;
+    }
+
+    .metric-value {
+      font-size: 28px;
+      font-weight: bold;
+      color: #0f766e;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 16px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div>
+      <h1>Панель продаж фарм рынка</h1>
+      <p id="status">Данные за июль 2026 года.</p>
+    </div>
+
+    <button id="updateButton">Обновить данные</button>
+  </div>
+
+  <div class="metrics">
+    <div class="card">
+      <p>Выручка</p>
+      <div class="metric-value">12,4 млн ₽</div>
+    </div>
+
+    <div class="card">
+      <p>Продажи</p>
+      <div class="metric-value">8 340 уп.</div>
+    </div>
+
+    <div class="card">
+      <p>Доля рынка</p>
+      <div class="metric-value">6,8%</div>
+    </div>
+  <div class="card">
+  <p>Средняя цена упаковки</p>
+  <div class="metric-value">1 486 ₽</div>
+</div>
+  <script>
+    const button = document.getElementById("updateButton");
+    const status = document.getElementById("status");
+
+    button.addEventListener("click", function () {
+      status.textContent = "Данные обновлены: 7 августа 2026.";
+    });
+  </script>
+</body>
+</html>
