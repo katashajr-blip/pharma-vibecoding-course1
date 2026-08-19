@@ -1,0 +1,5 @@
+source_row,issue_type,reason,details
+3,duplicate,Дубликат по ключу period+brand+region+channel,"Повтор строки 2: 2026-07, Бренд А, Москва, Аптеки"
+5,invalid_units,"units <= 0","units=-25"
+6,missing_required,"Пустые обязательные поля region и revenue_rub","region и revenue_rub пустые"
+9,missing_required,"Пустое обязательное поле revenue_rub","revenue_rub пустой"
